@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/amvaid/PokedexFSR#readme",
   "dependencies": {
+    "angular": "^1.7.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.3"
   }
