@@ -1,0 +1,23 @@
+{
+  "name": "pokedexfsr",
+  "version": "1.0.0",
+  "description": "Pokedex Full Stack Review",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amvaid/PokedexFSR.git"
+  },
+  "author": "Aman Vaid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amvaid/PokedexFSR/issues"
+  },
+  "homepage": "https://github.com/amvaid/PokedexFSR#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
