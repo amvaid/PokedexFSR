@@ -11,6 +11,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(express.static('client'));
 app.get('/', (request, response) => {
+  // console.log('HI');
   response.sendFile(__dirname + '/index.html');
 });
 
