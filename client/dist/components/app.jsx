@@ -1,4 +1,5 @@
 import React from 'react';
+import $ from 'jquery';
 import Search from './search.jsx';
 
 class App extends React.Component {
@@ -23,7 +24,22 @@ class App extends React.Component {
         'Content-Type': 'application/json'
       }
     }).catch(error => console.error('Error:', error))
-    .then(response => console.log('Success:', response));
+    .then(response => this.handleDatabaseGet(this.state.pokemon));
+  }
+
+  handleDatabaseGet(pokemonName) {
+  //   fetch('/search?pokemon=' + pokemonName, {
+  //     method: 'GET',
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   }).then(data => console.log(data.json()))
+  //   .catch(error => console.error('Error:', error))
+  //   .then(response => console.log(response));
+  // }
+    $.get('/search?pokemon=' + pokemonName, (data) => {
+      console.log(data);
+    });
   }
 
   render() {

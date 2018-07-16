@@ -7,14 +7,18 @@ module.exports = {
         if(err) {
           callback(err, null);
         } else {
-          callback(null, rows);
+          //console.log(JSON.stringify(rows[0]));
+          callback(null, JSON.stringify(rows[0]));
         }
       });
     },
 
     post: (requestParameters, callback) => {
-      db.connection.query(`INSERT INTO pokemon (pokemonID, name, weight, height, base_experience)
-        VALUES ('${requestParameters[0]}', '${requestParameters[1]}', '${requestParameters[2]}', '${requestParameters[3]}', '${requestParameters[4]}')`, (err, data) => {
+      db.connection.query(`INSERT INTO pokemon (pokemonID, name, weight,
+       height, base_experience, type, sprite)
+        VALUES ('${requestParameters[0]}', '${requestParameters[1]}', '${requestParameters[2]}', 
+        '${requestParameters[3]}', '${requestParameters[4]}',
+        '${requestParameters[5]}', '${requestParameters[6]}')`, (err, data) => {
           if(err) {
             callback(err, null);
           } else {
